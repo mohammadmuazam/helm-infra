@@ -1,6 +1,6 @@
-owner: SquadcastHub
+owner: mohammadmuazam
 git-repo: helm-infra
-pages-branch: master
+pages-branch: main
 charts-dir: squadcast-helm
 sign: false
 charts_repo_url: https://mohammadmuazam.github.io/helm-infra
