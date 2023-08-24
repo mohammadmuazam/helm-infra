@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "squadcast-helm.fullname" . }}
+  labels:
+    {{- include "squadcast-helm.labels" . | nindent 4 }}
+  annotations:
+    {{- include "squadcast-helm.annotations" . | nindent 4 }}
+  namespace: {{ .Values.namespace }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port }}
+      protocol: TCP
+      name: web
+  selector:
+    {{- include "squadcast-helm.selectorLabels" . | nindent 4 }}

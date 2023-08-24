@@ -1,0 +1,7 @@
+remote: origin
+target-branch: master
+chart-dirs:
+  - squadcast-helm
+chart-repos:
+  - squadcast-helm=https://mohammadmuazam.github.io/helm-infra
+helm-extra-args: --timeout 600s
